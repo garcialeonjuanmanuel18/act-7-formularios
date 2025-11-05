@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>act7 formularios</title>
-</head>
-<body>
-    <h1>Reservas</h1>
-        <form>
-            <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre"><br><br>
-            <label for="correo">Correo electrónico:</label>
-                <input type="email" name="correo"><br></br>
-            <label for="fecha1">Fecha entrada:</label>
-                <input type="date" name="fecha1"><br></br>
-            <label for="fecha2">Fecha salida:</label>
-                <input type="date" name="fecha2"><br></br>
-             <label for="huesped">Número de huéspedes:</label><br></br>
-                <input type="radio" name="huesped">1<br></br>
-                <input type="radio" name="huesped">2<br></br>
-                <input type="radio" name="huesped">3<br></br>
-                <input type="radio" name="huesped">4<br></br>
-             <label for="niños">De los cuales niños:</label><br></br>
-                <input type="radio" name="niños">1<br></br>
-                <input type="radio" name="niños">2<br></br>
-                <input type="radio" name="niños">3<br></br>
-            <Select for="habitacion"></select>Tipo de habitación:<br></br>
-                <input type=""
-            
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>act7 formularios</title>
+    </head>
+    <body>
+        <h1>Reservas</h1>
+            <form>
+                <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" required><br><br>
+                <label for="correo">Correo electrónico:</label>
+                    <input type="email" name="correo" required><br></br>
+                <label for="fecha1">Fecha entrada:</label>
+                    <input type="date" name="fecha1" min="2025-11-01" required><br></br>
+                <label for="fecha2">Fecha salida:</label>
+                    <input type="date" name="fecha2" min="2025-11-02" required><br></br>
+                <label for="huesped">Número de huéspedes (adultos y niños):</label><br></br>
+                    <input type="number" min="1" max="4" name="huesped" required><br><br>
+                <label for="habitacion">Tipo de habitación:</label><br><br>
+                <Select for="habitacion" required><br></br>
+                    <option name="habitación">Individual</option><br></br>
+                    <option name="habitación">Doble</option><br></br>
+                    <option name="habitación">Triple</option><br></br>
+                    <option name="habitación">Superior</option><br></br>
+                    <option name="habitación">suite</option><br></br>
+                </select><br></br>
+                <label for="serv">Servicios adicionales:</label><br></br>
+                        <input type="checkbox" name="serv">Desayuno incluido<br></br>
+                        <input type="checkbox" name="serv">Buffet libre<br></br>
+                        <input type="checkbox" name="serv">Cesta de bienvenida<br></br>
+                        <input type="checkbox" name="serv">Sauna<br></br>
+                        <input type="checkbox" name="serv">Pistas deportivas<br></br>
+                <label for="esp">Peticiones especiales:</label><br><br>
+                    <textarea name="esp"></textarea><br><br>
+                <label for="politica">Acepto la política de cancelación:</label><br></br>
+                        <input type="checkbox" name="politica" required><br></br>
+                <label for="reset"></label>
+                        <input type="reset" name="reset" value="Limpiar selección" required><br><br>
+                <label for="submit"></label>
+                        <input type="submit" name="submit" value="Confirmar reserva" required><br><br>
                 
-        </form>
-</body>
+                
+                    
+            </form>
+    </body>
 </html>
